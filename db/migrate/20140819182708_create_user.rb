@@ -5,6 +5,7 @@ class CreateUser < ActiveRecord::Migration
       t.string :email
       t.string :password_digest
       t.string :remember_token
+      t.string :location
     end
 
     add_index :users, :email, unique: true

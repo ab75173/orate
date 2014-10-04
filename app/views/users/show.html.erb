@@ -1,5 +1,18 @@
-<h1><%= @user.name %></h1>
+<div class="container">
+  <div class="col-md-4">
 
-<p><%= @user.email %></p>
+    <p>We'll add a picture here soon.</p>
+    <p><%= @user.location %></p>
+    <p><%= @user.email %></p>
+    <p><%= @user.fee_range %></p>
+    <p><%= @user.website %></p>
+    <p><%= link_to "Edit", edit_user_path(@user) %></p>
+  </div>
+  <div class="col-md-8">
+    <h1><%= @user.name %></h1>
+    <p><%= @user.tagline %></p>
+    <p><%= @user.bio %></p>
+  </div>
 
-<p><%= link_to "Edit", edit_user_path(@user) %></p>
+</div>
+

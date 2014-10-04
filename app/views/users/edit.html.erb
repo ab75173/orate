@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="col-sm-8">
+    <h1 id="page-title">Edit <%= @user.name.capitalize %></h1>
+    <%= render "fulluser_form" %>
+
+    <hr>
+
+    <%= form_for @user, method: 'delete' do |f| %>
+    <p id="page-text">Delete your account?</p> <%= f.submit "Delete", class: "btn btn-default", id: 'page-button-one' %>
+    <% end %>
+
+    <hr>
+
+    <%= link_to "Cancel", @user, class: "btn btn-default", id: 'page-button-one' %>
+
+  </div>
+</div>

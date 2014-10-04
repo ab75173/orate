@@ -49,7 +49,13 @@ class UsersController < ApplicationController
       :name,
       :email,
       :password,
-      :password_confirmation
+      :password_confirmation,
+      :location,
+      :bio,
+      :tagline,
+      :fee_range,
+      :willing_to_speak_for_free,
+      :website
     )
   end
 
