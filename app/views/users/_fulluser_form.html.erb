@@ -7,7 +7,7 @@
 </ul>
 <% end %>
 
-<%= form_for @user do |f| %>
+<%= form_for @user, :html => { :multipart => true } do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
 
@@ -38,6 +38,7 @@
   <%= f.label :website %>
   <%= f.text_field :website %>
 
+  <%= f.file_field :avatar %>
 
   <%= f.submit "Submit", id: 'submit' %>
 <% end %>

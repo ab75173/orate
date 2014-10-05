@@ -2,6 +2,7 @@
   <div class="col-sm-8">
     <h1 id="page-title">Edit <%= @user.name.capitalize %></h1>
     <%= render "fulluser_form" %>
+    <%= image_tag @user.avatar.url, class: "profile-pic" %>
 
     <hr>
 

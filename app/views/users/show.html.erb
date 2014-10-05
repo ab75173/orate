@@ -1,17 +1,27 @@
 <div class="container">
-  <div class="col-md-4">
-
-    <p>We'll add a picture here soon.</p>
+  <div class="col-sm-4">
+    <%= image_tag @user.avatar.url, class: "profile-pic" %>
     <p><%= @user.location %></p>
     <p><%= @user.email %></p>
     <p><%= @user.fee_range %></p>
     <p><%= @user.website %></p>
     <p><%= link_to "Edit", edit_user_path(@user) %></p>
   </div>
-  <div class="col-md-8">
+  <div class="col-sm-8">
     <h1><%= @user.name %></h1>
     <p><%= @user.tagline %></p>
-    <p><%= @user.bio %></p>
+    <p><%= @user.bio %>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
   </div>
 
 </div>

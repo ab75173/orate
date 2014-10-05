@@ -55,7 +55,8 @@ class UsersController < ApplicationController
       :tagline,
       :fee_range,
       :willing_to_speak_for_free,
-      :website
+      :website,
+      :avatar
     )
   end
 
