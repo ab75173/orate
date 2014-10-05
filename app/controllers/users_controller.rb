@@ -3,6 +3,10 @@ class UsersController < ApplicationController
   before_action :find_user, only: [:show, :edit, :update, :destroy]
   before_action :require_current_user, except: [:new, :create]
 
+  def index
+    @users = User.all
+  end
+
   def new
     @user = User.new
   end
