@@ -55,6 +55,24 @@ input#page-button-one.btn.btn-default {
   border-radius: 4px;
 }
 
+.form,{
+  text-align: center;
+}
+
+#form_2{
+  width: 100%;
+}
+
+.field{
+  border-radius: 4px;
+  margin-bottom: 5px;
+  line-height: 1.428571429;
+  font-size: 14px;
+  height: 34px;
+  padding: 6px 12px;
+  width: 210px;
+}
+
 .placeholder-section {
   background-color: black;
   margin-top: 20%;

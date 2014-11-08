@@ -1,24 +1,20 @@
-<% if @user.errors.any? %>
-<b>Errors:</b>
-<ul>
-  <% @user.errors.full_messages.each do |msg| %>
-  <li><%= msg %></li>
+  <% if @user.errors.any? %>
+  <b>Errors:</b>
+  <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
   <% end %>
-</ul>
-<% end %>
 
-<%= form_for @user do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+  <%= form_for @user do |f| %>
+    <div><%= f.text_field :name, placeholder: 'name', class: 'field' %></div>
 
-  <%= f.label :email %>
-  <%= f.text_field :email %>
+    <div><%= f.text_field :email, placeholder: 'email', class: 'field' %></div>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %>
+    <div><%= f.password_field :password, placeholder: 'password', class: 'field'  %></div>
 
-  <%= f.label :password_confirmation, 'Confirm Password' %>
-  <%= f.password_field :password_confirmation %>
+    <div><%= f.password_field :password_confirmation, placeholder: 'confirm password', class: 'field'  %></div>
 
-  <%= f.submit "Submit", id: 'submit' %>
-<% end %>
+    <%= f.submit "Submit", id: 'submit' %>
+  <% end %>
