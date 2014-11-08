@@ -45,6 +45,16 @@ video#bgvid {
   text-align: center;
 }
 
+button.btn.btn-default, 
+a.btn.btn-default,
+#signin,
+input#sm-homebutton.btn.btn-default,
+input#submit,
+input#page-button-one.btn.btn-default {
+  background-color: #33cccc;
+  border-radius: 4px;
+}
+
 .placeholder-section {
   background-color: black;
   margin-top: 20%;
