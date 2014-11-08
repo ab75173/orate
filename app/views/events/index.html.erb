@@ -1,37 +1,21 @@
-<h1>Listing events</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Location</th>
-      <th>Date</th>
-      <th>Tagline</th>
-      <th>Website</th>
-      <th>Topics</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class="container">
+  <h1>Events</h1>
+  <div class="col-sm-4">
+    Search Section
+  </div>
+  <div class="col-sm-8">
+    Events
     <% @events.each do |event| %>
-      <tr>
-        <td><%= event.name %></td>
-        <td><%= event.location %></td>
-        <td><%= event.date %></td>
-        <td><%= event.tagline %></td>
-        <td><%= event.website %></td>
-        <td><%= event.topics %></td>
-        <td><%= event.description %></td>
-        <td><%= link_to 'Show', event %></td>
-        <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="row event-blob">
+        <%= image_tag event.photo.url, class: "event-pic" %>
+        <ul>
+          <li><%= event.name %></li>
+          <li><%= event.location %></li>
+          <li><%= event.tagline %></li>
+          <li><%= event.topics %></li>
+          <li><%= event.description %></li>
+        </ul>
+      </div><hr>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Event', new_event_path %>
+  </div>
+</div>
