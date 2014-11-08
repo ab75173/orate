@@ -35,5 +35,9 @@
   <%= @event.description %>
 </p>
 
+<p>
+  <%= image_tag @event.photo.url %>
+</p>
+
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>

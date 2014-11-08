@@ -45,13 +45,70 @@ video#bgvid {
   text-align: center;
 }
 
-.placeholder-section {
-  background-color: black;
-  margin-top: 20%;
+button.btn.btn-default, 
+a.btn.btn-default,
+#signin,
+input#sm-homebutton.btn.btn-default,
+input#submit,
+input#page-button-one.btn.btn-default,
+a#page-button-one.btn.btn-default{
+  background-color: #33cccc;
+  border-radius: 4px;
+  padding: 6px 12px;
 }
 
-.placeholder-section-two {
+.form{
+  text-align: center;
+}
+
+#bio{
+  width: 90%;
+  height: 200px;
+  float: left;
+  margin-left: 10%;
+}
+
+#form_2{
+  width: 100%;
+}
+
+.container.row.form{
+  margin: 0 auto;
+}
+
+#user_avatar{
+  text-align: center;
+}
+
+.field{
+  border-radius: 4px;
+  margin-bottom: 5px;
+  line-height: 1.428571429;
+  font-size: 14px;
+  height: 34px;
+  padding: 6px 12px;
+  width: 210px;
+}
+
+.field2{
+  text-align: center;
+}
+
+#choose-file{
+  align-text: center;
+}
+
+input#user_avatar.photo-field{
+  display: block;
+}
+
+#edit_btn{
+  text-align: center;
+}
+
+.placeholder-section {
   background-color: white;
+  margin-top: 10%;
 }
 
 .profile-pic {
@@ -59,4 +116,11 @@ video#bgvid {
   height: 300px;
   border-radius: 300px;
   border: 3px solid black;
+  float: left;
+}
+
+.footer {
+  padding: 30px 0;
+  color: gray;
+  background-color: black;
 }
