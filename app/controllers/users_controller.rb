@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :require_signin, except: [:new, :create]
   before_action :find_user, only: [:show, :edit, :update, :destroy]
-  before_action :require_current_user, except: [:new, :create]
+  before_action :require_current_user, except: [:new, :create, :speakers]
 
   def index
     @users = User.all
@@ -11,6 +11,11 @@ class UsersController < ApplicationController
     @user = User.new
 
   end
+
+  def speakers
+    @users = User.all
+  end
+
 
   def create
     @user = User.new(user_params)

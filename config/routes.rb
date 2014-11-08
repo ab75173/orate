@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get '/signin' => 'sessions#new'
   delete '/signout' => 'sessions#destroy'
 
+  get '/speakers' => 'users#speakers'
+
   resources :users
   resources :sessions
   resources :howitworks
