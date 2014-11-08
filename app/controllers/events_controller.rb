@@ -18,7 +18,11 @@ class EventsController < ApplicationController
   end
 
   # GET /events/1/edit
-  def edit
+  def edit # and 'update', and 'destroy'
+    if !can_edit?
+      render_forbidden
+    end
+      # render_forbidden and return unless can_edit?
   end
 
   # POST /events
@@ -54,10 +58,14 @@ class EventsController < ApplicationController
   # DELETE /events/1
   # DELETE /events/1.json
   def destroy
-    @event.destroy
-    respond_to do |format|
-      format.html { redirect_to events_url, notice: 'Event was successfully destroyed.' }
-      format.json { head :no_content }
+    if can_edit? == true
+      @event.destroy
+      respond_to do |format|
+        format.html { redirect_to events_url, notice: 'Event was successfully destroyed.' }
+        format.json { head :no_content }
+      end
+    else
+      render_forbidden
     end
   end
 
@@ -65,6 +73,19 @@ class EventsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_event
       @event = Event.find(params[:id])
+    end
+
+    def can_edit?
+      @event = Event.find(params[:id])
+      if current_user && current_user.events.include?(@event)
+        return true
+      else
+        return false
+      end
+    end
+
+    def render_forbidden
+      redirect_to events_path
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

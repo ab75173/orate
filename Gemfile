@@ -33,6 +33,8 @@ gem "paperclip", "~> 4.2"
 
 gem 'rails_12factor'
 
+gem 'pry-rails', group: :development
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
