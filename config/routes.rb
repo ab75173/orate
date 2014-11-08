@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :users
   resources :sessions
   resources :howitworks
+  resources :events
 
 
   # Example of regular route:
