@@ -1,18 +1,17 @@
-<div class="container">
-  <div class="col-sm-8">
-    <h1 id="page-title">Edit <%= @user.name.capitalize %></h1>
-    <%= render "fulluser_form" %>
+<div class="container row form">
+  
+  <h1 class="col-lg-12 col-sm-12 col-md-12" id="page-title">Edit <%= @user.name.capitalize %>'s Profile</h1>
+  <div class="col-xs-8 col-sm-8 col-md-10" id="form_2">
     <%= image_tag @user.avatar.url, class: "profile-pic" %>
+    <%= render "fulluser_form" %>
 
     <hr>
 
     <%= form_for @user, method: 'delete' do |f| %>
-    <p id="page-text">Delete your account?</p> <%= f.submit "Delete", class: "btn btn-default", id: 'page-button-one' %>
+        <p id="page-text">Delete your account?</p> <%= f.submit "Delete", class: "btn btn-default", id: 'page-button-one' %>
+        <%= link_to "Cancel", @user, class: "btn btn-default", id: 'page-button-one' %>
     <% end %>
 
-    <hr>
-
-    <%= link_to "Cancel", @user, class: "btn btn-default", id: 'page-button-one' %>
-
   </div>
+
 </div>
