@@ -1,0 +1,141 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require bootstrap.min
+ */
+
+.video-section .pattern-overlay {
+padding: 0px;
+margin-top: 10%;
+min-height: 0px;
+}
+
+video#bgvid {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  background-size: cover;
+}
+
+#landing-tagline {
+  color: white;
+  font-size: 3em;
+  text-align: center;
+  text-shadow: 2px 2px gray;
+  padding: 10% 0;
+}
+
+#landing-buttons {
+  text-align: center;
+}
+
+button.btn.btn-default,
+a.btn.btn-default,
+#signin,
+input#sm-homebutton.btn.btn-default,
+input#submit,
+input#page-button-one.btn.btn-default,
+a#page-button-one.btn.btn-default{
+  background-color: #33cccc;
+  border-radius: 4px;
+  padding: 6px 12px;
+}
+
+.form{
+  text-align: center;
+}
+
+#bio{
+  width: 90%;
+  height: 200px;
+  float: left;
+  margin-left: 10%;
+}
+
+#form_2{
+  width: 100%;
+}
+
+.container.row.form{
+  margin: 0 auto;
+}
+
+#user_avatar{
+  text-align: center;
+}
+
+.field{
+  border-radius: 4px;
+  margin-bottom: 5px;
+  line-height: 1.428571429;
+  font-size: 14px;
+  height: 34px;
+  padding: 6px 12px;
+  width: 210px;
+}
+
+.field2{
+  text-align: center;
+}
+
+#choose-file{
+  align-text: center;
+}
+
+input#user_avatar.photo-field{
+  display: block;
+}
+
+#edit_btn{
+  text-align: center;
+}
+
+.placeholder-section {
+  background-color: white;
+  margin-top: 10%;
+}
+
+.profile-pic {
+  width: 300px;
+  height: 300px;
+  border-radius: 300px;
+  border: 3px solid black;
+  float: left;
+}
+
+.event-pic {
+  width: 250px;
+  height: 250px;
+  border-radius: 250px;
+  border: 3px solid black;
+}
+
+.footer {
+  padding: 30px 0;
+  color: gray;
+  background-color: black;
+}
+
+.event-pic {
+  float: left;
+}
+.event-blob ul {
+  margin-left: 250px;
+  list-style-type: none;
+}
