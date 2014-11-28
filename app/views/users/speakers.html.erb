@@ -1,20 +1,35 @@
 <div class="container">
   <h1>Speakers</h1>
   <div class="col-sm-4">
-    Search Section
+    Search Section Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   </div>
   <div class="col-sm-8">
-      Speakers
     <% @users.each do |user| %>
-      <div class="row event-blob">
-        <ul>
-          <li><%= user.name %></li>
-          <li><%= user.email %></li>
-          <li><%= user.bio %></li>
-          <li><%= user.fee_range %></li>
-          <li><%= user.website %></li>
-        </ul>
-      </div><hr>
-    <% end %>
+    <div class="profiles-wrapper">
+      <a class="profile-card-link" href="/users/<%= user.id %>">
+      <div class="profile-card">
+        <%= image_tag user.avatar.url, class: "profile-card-pic" %>
+        <div class="profile-card-wrapper">
+          <div class="profile-current-location">
+            <%= user.location %>
+          </div>
+          <ul>
+            <li><h2><%= user.name %></h2></li>
+            <li><h3><%= user.tagline %></h3></li>
+            <li><%= user.bio %></li>
+            <li><%= user.fee_range %></li>
+            <li><%= user.website %></li>
+          </ul>
+        </div>
+      </div>
+      </a>
+      </div>
+      <% end %>
+    </div>
   </div>
 </div>
