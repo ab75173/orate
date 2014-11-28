@@ -9,11 +9,13 @@
       <div class="row event-blob">
         <%= image_tag event.photo.url, class: "event-pic" %>
         <ul>
-          <li><%= event.name %></li>
-          <li><%= event.location %></li>
-          <li><%= event.tagline %></li>
-          <li><%= event.topics %></li>
-          <li><%= event.description %></li>
+          <li class="name"><a href="/events/<%= event.id %>"><%= event.name %></li></a>
+          <li class="city"><%= event.location %></li>
+          <li>Tagline: <%= event.tagline %></li>
+          <li>Topics: <%= event.topics %></li>
+          <li>Description: <%= event.description %></li>
+          <li class="date"><%= event.date %></li>
+          <li><%= event.website %></li>
         </ul>
       </div><hr>
     <% end %>

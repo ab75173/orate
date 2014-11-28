@@ -139,3 +139,18 @@ input#user_avatar.photo-field{
   margin-left: 250px;
   list-style-type: none;
 }
+
+/* -- List all events page -- */
+
+div.row.event-blob ul li {
+  font-size: 20px;
+}
+
+div.row.event-blob ul li.name {
+  font-size: 30px;
+  color: purple;
+}
+
+div.row.event-blob ul li.city, li.date {
+  text-transform: uppercase;
+}
